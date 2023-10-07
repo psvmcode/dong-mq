@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: dong-mq
+  rabbitmq:
+    host: 129.211.30.241
+    port: 5672
+    username: dongboy
+    password: dongboy
+  redis:
+    username:
+    host: 129.211.30.241
+    password: dongboy
+    database: 0
+    connect-timeout: 3000
+    timeout: 3000
+    jedis:
+      pool:
+        enabled: true
+        max-active: 16
+        max-wait: 1000
+        max-idle: 16
+        min-idle: 8
+
+server:
+  port: 80
+  servlet:
+    context-path: /mq
+
+logging:
+  config: classpath:logback-spring.xml
