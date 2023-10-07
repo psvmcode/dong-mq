@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
+ * rabbitmq生产者demo
+ *
  * @author lidong14@kuaishou.com
  * Created on 2023-08-13
  */

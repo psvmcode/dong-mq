@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
+ * redis消费者demo
+ *
  * @Author dongboy
  * @what time    2023/9/30 14:19
  */

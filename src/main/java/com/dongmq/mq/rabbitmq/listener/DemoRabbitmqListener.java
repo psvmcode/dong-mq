@@ -6,6 +6,8 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
+ * rabbitmq消费者demo
+ *
  * @author lidong14@kuaishou.com
  * Created on 2023-08-13
  */

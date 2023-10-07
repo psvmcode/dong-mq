@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
+ * redis生产者demo
+ *
  * @Author dongboy
  * @what time    2023/9/30 14:16
  */
