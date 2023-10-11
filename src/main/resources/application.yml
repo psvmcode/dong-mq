@@ -6,6 +6,7 @@ spring:
     port: 5672
     username: dongboy
     password: dongboy
+    virtual-host: /
   redis:
     username:
     host: 129.211.30.241

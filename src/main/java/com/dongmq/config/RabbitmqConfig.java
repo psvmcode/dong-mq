@@ -20,22 +20,23 @@ public class RabbitmqConfig {
     @Bean
     public Queue DemoQueue() {
         log.info("create rabbitmq queue : {}", RabbitmqConstant.DEMO_RABBITMQ_QUEUE);
-        return new Queue(RabbitmqConstant.DEMO_RABBITMQ_QUEUE);
+        return new Queue(RabbitmqConstant.DEMO_RABBITMQ_QUEUE, true);
     }
 
     // 声明交换机
     @Bean
-    public FanoutExchange DemoFanoutExchange() {
+    public DirectExchange DemoExchange() {
         log.info("create rabbitmq exchange : {}", RabbitmqConstant.DEMO_RABBITMQ_EXCHANGE);
-        return new FanoutExchange(RabbitmqConstant.DEMO_RABBITMQ_EXCHANGE);
+        return ExchangeBuilder.directExchange(RabbitmqConstant.DEMO_RABBITMQ_EXCHANGE).durable(true).build();
     }
 
     // 绑定队列和交换机
     @Bean
     public Binding DemoBinding() {
         log.info("binding rabbitmq queue and exchange : {},{}"
-                , RabbitmqConstant.DEMO_RABBITMQ_QUEUE, RabbitmqConstant.DEMO_RABBITMQ_EXCHANGE);
-        return BindingBuilder.bind(DemoQueue()).to(DemoFanoutExchange());
+                , RabbitmqConstant.DEMO_RABBITMQ_QUEUE,
+                RabbitmqConstant.DEMO_RABBITMQ_EXCHANGE);
+        return BindingBuilder.bind(DemoQueue()).to(DemoExchange()).with("test");
     }
 
 }

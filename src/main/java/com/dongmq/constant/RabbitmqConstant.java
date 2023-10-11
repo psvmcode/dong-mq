@@ -9,9 +9,9 @@ package com.dongmq.constant;
 public class RabbitmqConstant {
 
     // 队列
-    public static String DEMO_RABBITMQ_QUEUE = "demo_rabbitmq_queue";
+    public static final String DEMO_RABBITMQ_QUEUE = "demo_rabbitmq_queue";
 
     // 交换机
-    public static String DEMO_RABBITMQ_EXCHANGE = "demo_rabbitmq_exchange";
+    public static final String DEMO_RABBITMQ_EXCHANGE = "demo_rabbitmq_exchange";
 
 }

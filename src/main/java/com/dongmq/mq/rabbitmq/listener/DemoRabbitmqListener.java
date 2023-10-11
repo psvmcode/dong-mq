@@ -1,5 +1,6 @@
 package com.dongmq.mq.rabbitmq.listener;
 
+import com.dongmq.constant.RabbitmqConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -13,10 +14,9 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-@RabbitListener(queues = "demo_rabbitmq_queue")
 public class DemoRabbitmqListener {
 
-    @RabbitHandler
+    @RabbitListener(queues = RabbitmqConstant.DEMO_RABBITMQ_QUEUE)
     public void listener(String message) {
         log.info("rabbitmq receiver message : {}", message);
     }
