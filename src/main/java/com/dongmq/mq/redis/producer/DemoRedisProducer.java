@@ -11,8 +11,7 @@ import javax.annotation.Resource;
  * redis生产者demo
  *
  * @Author dongboy
- * @what time    2023/9/30 14:16
- */
+ * @what time    2023/9/30 14:16 */
 @Slf4j
 @Component
 public class DemoRedisProducer {
